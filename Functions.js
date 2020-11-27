@@ -17,3 +17,67 @@ let s1 = fun1(345);
 console.log(s1);
 
 //Arrow function
+var fun2 = number =>  number * number;
+
+(a,b) => {
+    let sum = a + b;
+    return sum;
+}
+
+// Closure 
+//Example 1
+function outside(x)
+{
+    function inside(y){
+        return x + y;
+    }
+    return inside;
+}
+
+let inside_fn = outside(10); // Give me a function that adds 10 to whatever comes to it.
+let result = inside_fn(40);
+console.log(result);
+
+// Example 2
+function addSquares(a,b)
+{
+    function square(x){
+        return x * x;
+    }
+    let result = square(a) +  square(b);
+    return result;
+}
+let r = addSquares(3453, 342);
+
+// Example 3
+let createPet = name =>
+{
+    return {
+        setName: newName => name = newName,
+        getName: () => name
+    }
+}
+let dog = createPet('diamond');
+
+// Parameters 
+function formatName(name, address, salutation = "Ms.") {
+    let completeName = salutation + ", " + name + ", " + address;
+    return completeName;
+}
+
+let n = formatName( "Ram Shakya", "ktm", "Mr.");
+let n1 = formatName("Kajol Shakya", "ktm");
+console.log(n);
+console.log(n1);
+
+// Rest parameters
+
+function add(a, b, ...moreArgs){
+    console.log(a);
+    console.log(b);
+    console.log(moreArgs);
+}
+add(23, 45);
+add(23, 45, 56, 67);
+
+
