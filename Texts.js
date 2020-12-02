@@ -21,8 +21,16 @@ let name = `Cotiviti ${12+34-56}`;
 //let re1 = new RegExp('[0-9]'); // '\d' same ho
 //x.match(re);
 
-let xx = "23 067 sd fsdf sdf sd 34 2342";
-let re = /sd/;
-let yy = xx.match(re);
-console.log(yy);
+//let xx = "23 067 sd fsdf sdf sd 34 2342";
+//let re = /sd/;
+//let yy = xx.match(re);
+//console.log(yy);
+
+//Regular Expression
+let message= "The concept arose in the 1950s when the American mathematician Stephen Cole Kleene formalized the description of a regular language.";
+let regexVowels = /[aeiou]/g;
+let matches = message.match(regexVowels);
+console.log(matches);
+
+
 
